@@ -1,0 +1,48 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'rust-p2p-chat'",
+      "cargo": {
+        "args": ["build", "--bin=rust-p2p-chat", "--package=rust-p2p-chat"],
+        "filter": {
+          "name": "rust-p2p-chat",
+          "kind": "bin"
+        }
+      },
+      "args": [
+        "--ip",
+        "127.0.0.1",
+        "--port",
+        "8077",
+        "--username",
+        "YourNameHere"
+      ],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'rust-p2p-chat'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=rust-p2p-chat",
+          "--package=rust-p2p-chat"
+        ],
+        "filter": {
+          "name": "rust-p2p-chat",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
