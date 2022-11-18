@@ -11,3 +11,8 @@ pub struct CliAguments {
     #[arg(short, long)]
     pub mode: String,
 }
+
+pub struct PeerInfo {
+    pub ip: String,
+    pub port: u16,
+}

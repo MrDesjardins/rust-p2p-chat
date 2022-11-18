@@ -1,11 +1,13 @@
 use std::io;
 use std::io::Write;
 use cli_shared::models::CliAguments;
+/* use std::net::TcpStream; */
+
 pub fn loop_write(args: CliAguments) {
     loop {
         let mut user_input = String::new();
 
-        print!("> ");
+        print!("{} > ", args.username);
         io::stdout().flush().unwrap();
         io::stdin().read_line(&mut user_input).unwrap();
         let user_input_clean = user_input.trim();
