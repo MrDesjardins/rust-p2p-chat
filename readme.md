@@ -33,8 +33,16 @@ which gnuplot
 ```
 
 ## How to use?
+
+There is two modes: read and write. The read receives all messages and the write send messages to all the read nodes. If you want to read and write you need two start two instances of the CLI
+### Write Mode
 ```sh
-rust-p2p-chat -ip 127.0.0.1 -port 8077 -username YourNameHere
+rust-p2p-chat -ip 127.0.0.1 -port 8077 -username YourNameHere -mode w
+```
+
+### Read Mode
+```sh
+rust-p2p-chat -ip 127.0.0.1 -port 8077 -username YourNameHere -mode r
 ```
 
 # As a Developer of the Library

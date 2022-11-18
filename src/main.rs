@@ -10,13 +10,15 @@ struct Cli {
     ip: String,
     #[arg(short, long)]
     username: String,
+    #[arg(short, long)]
+    mode: String,
 }
 
 fn main() {
     let args = Cli::parse();
     println!(
-        "Rust P2P running on address {}:{} with username {}\n",
-        args.ip, args.port, args.username
+        "Rust P2P running [{}] on address {}:{} with username {}\n",
+        args.mode, args.ip, args.port, args.username
     );
 
     loop {
