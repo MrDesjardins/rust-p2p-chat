@@ -57,7 +57,7 @@ rustup default stable
 ## How to Run Locally?
 
 ```sh
-cargo run -- --ip 127.0.0.1 --port 7777 --username patrick
+cargo run -- --ip 127.0.0.1 --port 7777 --username patrick -mode w
 ```
 
 ## Tests
